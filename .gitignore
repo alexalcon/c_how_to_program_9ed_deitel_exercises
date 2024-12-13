@@ -1,0 +1,54 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executable files
+*.exe
+*.out
+*.app
+
+# Debugging files
+*.dSYM/
+*.stackdump
+*.core
+*.pdb
+
+# Build directories
+/build/
+bin/
+obj/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+Desktop.ini
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Dependency files
+*.d
+
+# Ignore directories
+code_examples/
+vscode_ws/
