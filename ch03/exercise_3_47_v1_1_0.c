@@ -30,7 +30,6 @@
 // decryption program
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h> // for isdigit()
 
 int main(void) {
     // initialization phase
@@ -42,7 +41,7 @@ int main(void) {
     //---------------------------------------------------------------------------------------
     
     // processing phase
-    //--------------------------------------------------------------------
+    //-------------------------------------------------------------------------------
     // swapping digits to reverse the encryption
     // swap the first and third digits, and the second and fourth digits
 
@@ -58,11 +57,30 @@ int main(void) {
     encrypted_data[1] = encrypted_data[3];
     encrypted_data[3] = temp;
     //**************************************
-    //--------------------------------------------------------------------
+
+    // arithmetic process logic
+    //*****************************************************************************
+    // decrypt each digit by reversing (digit + 7) % 10
+    char string_decrypted_data[5];
+    int index = 0;
+    while (index < strlen(encrypted_data)) {
+        int digit = encrypted_data[index] - '0'; // char to int
+        int decrypted_digit = (digit - 7) < 0 ? (digit - 7 + 10) : (digit - 7);
+        string_decrypted_data[index] = decrypted_digit + '0'; // int back to char
+        
+        ++index;
+    }
+    string_decrypted_data[4] = '\0'; // null-terminate the string
+
+    // convert decrypted string to integer
+    int decrypted_data = 0; // decrypted integer value
+    sscanf(string_decrypted_data, "%d", &decrypted_data);
+    //*****************************************************************************
+    //-------------------------------------------------------------------------------
     
     // termination phase
     // show result
-    printf("Decrypted data (after swapping): %04s\n", encrypted_data );
+    printf("Decrypted data: %04d\n", decrypted_data);
 
     return 0;
 }
