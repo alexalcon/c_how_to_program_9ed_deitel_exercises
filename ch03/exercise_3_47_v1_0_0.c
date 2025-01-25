@@ -39,25 +39,58 @@ int main(void) {
     int data = 0;
     printf("%s", "Enter a four digit integer: ");
     scanf("%d", &data);
-    //---------------------------------------------
+    //----------------------------------------------
 
     // processing phase
     //-----------------------------------------------------------
     // main logic
     //*********************************************************
     while (data != 0) {
-        int digit = data % 10;
-        encrypted_data = ((digit + 7) % 10);
-        printf("%d ", encrypted_data);
-        data /= 10;
+        int digit = data % 10; // getting data last digit
+
+        encrypted_data += (multiplier * ((digit + 7) % 10));
+        
+        data /= 10; // getting off data last digit
+
+        // once every last digit is obtained and 
+        // encrypted the multiplier is updated
+        /**
+         * e.g: for 1234 then the first encrypted process 
+         *      (arithmetic process of adding 7 and computing 
+         *      mod 10) result is 1098 (in reversal order), 
+         *      i.e., 8901 is the correct first encrypted 
+         *      process
+         * 
+         *      thus, for the second encrypted process 
+         *      (swapping numbers), 8901 --> 0189 or 
+         *      1098 --> 0189  
+         * 
+         *      now, (1098 --> 0189) then (in line 48):
+         *
+         *          0189 = 1*100 + 0*1000 + 9*1 + 9*10
+         */ 
+        if (multiplier == 1000) {
+            multiplier = 1;
+        } 
+        else {
+            multiplier *= 10;
+        }
     }
     //*********************************************************
     //-----------------------------------------------------------
     
-
     // termination phase
-    //----------------------------------------------
-    //----------------------------------------------
+    // show result
+    /**
+     * print the number with leading zeros 
+     * and ensuring a width of 4 digits
+     * 
+     *      - %d: format specifier for integers
+     *      - 04: ensures the number is at least 4 
+     *        characters wide, with leading zeros 
+     *        if necessary
+     */
+    printf("Encrypted data: %04d\n", encrypted_data);
  
     return 0;
 }
