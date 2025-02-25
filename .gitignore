@@ -29,9 +29,9 @@ obj/
 *.log
 
 # IDE and editor files
-.vscode/
-.idea/
-*.code-workspace
+# .vscode/
+# .idea/
+# *.code-workspace
 
 # macOS specific files
 .DS_Store
@@ -50,5 +50,3 @@ Makefile
 *.d
 
 # Ignore directories
-code_examples/
-vscode_ws/
