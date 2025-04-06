@@ -1,0 +1,3 @@
+[submodule "code_examples"]
+	path = code_examples
+	url = https://github.com/pdeitel/CHowtoProgram9e
