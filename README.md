@@ -68,7 +68,7 @@ For executing the code:
 ./exercise_2_17_v1_0_0
 ```
 
-## 📝 Contents
+## 📁 Repository File System Structure
 
 Each chapter from the Deitel & Deitel book is represented by a dedicated directory, such as `ch02/`, `ch03/`, etc. Within each chapter directory, you will find:
   - Individual `.c` files for each exercise solved.
