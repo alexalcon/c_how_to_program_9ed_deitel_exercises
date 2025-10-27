@@ -50,3 +50,4 @@ Makefile
 *.d
 
 # Ignore directories
+notes/*
