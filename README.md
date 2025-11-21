@@ -118,6 +118,61 @@ Some exercise descriptions feature a ✰ symbol, indicating that the exercise pr
  */
 ```
 
+### 🧭 Project Documentation Overview
+
+This project adopts a **fully unified documentation model** following that theory, implementation notes, insights, mistakes, and design explanations are documented exclusively in a dedicated Notion workspace.
+
+#### 📚 **Notion Workspace: Technical Notes & Deep-Dive Explanations**
+
+All extended documentation is maintained in one centralized Notion workspace that includes:
+
+##### **1. Technical implementation explanations of some chapter exercises**
+
+* Reasoning behind key design decisions.
+* Alternative approaches and why one strategy is preferred.
+* Code architecture notes oriented toward **modern C practices**.
+* Memory, pointers, arrays, and low-level behavior analyses.
+* Debugging patterns and lessons learned.
+
+##### **2. First-Principles Theory Notes**
+
+This workspace also serves as a theoretical companion for the entire book:
+
+* Explanations of fundamentals starting from zero.
+* Mathematical and logic foundations used in algorithmic exercises.
+* Step-by-step analyses of critical C language mechanisms.
+* Notes on pitfalls and conceptual clarifications.
+
+
+##### **3. Embedded Systems, Robotics & Control Case Studies**
+
+A key enhancement of this project is the inclusion of **real-world engineering perspectives**. Throughout the Notion pages, short technical case studies are explained, showing how the concepts learned apply to:
+
+**Embedded Systems**
+
+* Memory models and microcontroller constraints.
+* Interrupt-driven logic redundancy.
+* Low-level I/O handling.
+* Deterministic timing and data integrity considerations.
+
+**Robotics Software Development**
+
+* How C fundamentals translate to firmware and robot middleware.
+* Safety-critical coding practices used in robotics companies.
+* How ROS nodes interact with low-level C/C++ systems.
+
+**Control Algorithms Applied to Robotics**
+
+* PID and feedback-loop mechanisms explained with first principles.
+* Discrete-time vs continuous-time control reasoning.
+* Real microcontroller implementation considerations.
+
+#### 🔗 Access the Notion Workspace
+
+[C Programming Deitel Exercises — Technical Notes & Insights](https://fate-axolotl-685.notion.site/29a755efc7a580f4b085c2dc70ec74fb?v=2b2755efc7a580379bb5000c19cc5221&source=copy_link)
+
+---
+
 ## 🤝 Contributions
 
 Contributions are welcome! If you have a better way to solve an exercise, found a mistake, or want to add a new exercise, check out the [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute to this repository.
