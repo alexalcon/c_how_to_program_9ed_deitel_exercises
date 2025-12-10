@@ -51,3 +51,4 @@ Makefile
 
 # Ignore directories
 notes/*
+book_code_examples/*
